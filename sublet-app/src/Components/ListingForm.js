@@ -50,7 +50,7 @@ function ListingForm({ onAddListing }) {
                     onClose={() => setShowPopup(false)}
                 />
             )}
-            <button onClick={() => setShowPopup(true)}>Log Form Data</button>
+            <button onClick={() => setShowPopup(true)}>Post</button>
         </div>
     );
 }
