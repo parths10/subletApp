@@ -1,0 +1,26 @@
+/* ListingForm.css */
+.ListingForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.ListingForm input,
+.ListingForm select,
+.ListingForm textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ListingForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Add any additional styles for the ListingForm component here */

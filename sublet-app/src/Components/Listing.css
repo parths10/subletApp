@@ -1,0 +1,25 @@
+.Listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.ListingImage img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.ListingInfo h2 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.ListingInfo p {
+    margin: 5px;
+}

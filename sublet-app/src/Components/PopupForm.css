@@ -1,0 +1,71 @@
+.PopupForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Add z-index to ensure the popup appears above other elements */
+}
+
+.PopupFormContent {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+}
+
+.PopupForm h2 {
+    color: #007bff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.PopupForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.PopupForm input,
+.PopupForm select,
+.PopupForm textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.PopupForm label {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.PopupForm button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.PopupForm button[type='submit'] {
+    background-color: #28a745;
+}
+
+.PopupForm button[type='button'] {
+    background-color: #dc3545;
+}
+
+.PopupForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Add any additional styles for the PopupForm component here */
