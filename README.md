@@ -2,7 +2,7 @@
 
 ### Project description:
 
-[//]: # **EasySubletUBC** is a sublet management web application that lets the students at the UBC campus create a sublet posting where they mention the residence type, expected rent, and other details relevant to sublessees. The application will have a two side theme, one for sublessors and one for sublessees. The sublessors will be able to add, update and delete a posting while the sublessees will be able to view and interact with a posting. 
+**EasySubletUBC** is a sublet management web application that lets the students at the UBC campus create a sublet posting where they mention the residence type, expected rent, and other details relevant to sublessees. The application will have a two side theme, one for sublessors and one for sublessees. The sublessors will be able to add, update and delete a posting while the sublessees will be able to view and interact with a posting. 
 
 Access EasySubletUBC here:
 
