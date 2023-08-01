@@ -1,12 +1,13 @@
 .Listing {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /*flex-direction: column;*/
+    /*align-items: center;*/
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
+    /*justify-content: center; !* Vertically align the contents *!*/
 }
 
 .ListingImage img {
@@ -15,17 +16,27 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin-left: auto; /* Keep the image on the right corner */
+
+}
+.ListingInfo {
+    flex: 1; /* Allow ListingInfo to take remaining space */
 }
 
 .ListingInfo h2 {
     color: #007bff;
     font-size: 1.6rem;
     margin-bottom: 10px;
+    text-align: left; /* Align the heading to the left */
+
+
 }
 
 .ListingInfo p {
     margin: 5px;
     font-size: 1.2rem;
+    text-align: left; /* Align the heading to the left */
+
 }
 
 /* Add any additional styles for the Listing component here */

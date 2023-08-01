@@ -13,3 +13,4 @@ function ListingsList({ listings }) {
 }
 
 export default ListingsList;
+
