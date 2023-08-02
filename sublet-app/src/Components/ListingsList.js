@@ -1,6 +1,8 @@
 import React from 'react';
 import './ListingsList.css';
 import Listing from './Listing';
+import { connect } from 'react-redux'; // importing connection
+
 
 function ListingsList({ listings }) {
     return (
@@ -12,5 +14,9 @@ function ListingsList({ listings }) {
     );
 }
 
-export default ListingsList;
+// Connects the component to the Redux store
+const mapStateToProps = (state) => ({
+    listings: state.listings,
+});
 
+export default connect(mapStateToProps)(ListingsList);

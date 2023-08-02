@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './ListingForm.css';
 import PopupForm from './PopupForm';
+import { connect } from 'react-redux';
+import { addListing } from '../Redux/actions';
 
 function ListingForm({ onAddListing }) {
     const [formData, setFormData] = useState({
@@ -55,4 +57,4 @@ function ListingForm({ onAddListing }) {
     );
 }
 
-export default ListingForm;
+export default connect(null, { onAddListing: addListing })(ListingForm);
