@@ -8,6 +8,18 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     /*justify-content: center; !* Vertically align the contents *!*/
+    position: relative;
+}
+
+.DeleteButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 .ListingImage img {

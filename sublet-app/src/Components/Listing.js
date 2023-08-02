@@ -1,7 +1,7 @@
 import React from 'react';
 import './Listing.css';
 
-function Listing({ listing }) {
+function Listing({ listing, onDeleteClick }) {
     const { name, contact, residenceArea, roomType, expectedRent, description, image } = listing;
 
     return (
@@ -17,8 +17,16 @@ function Listing({ listing }) {
             <div className="ListingImage">
                 {image && <img src={URL.createObjectURL(image)} alt="Listing" />}
             </div>
+<button className="DeleteButton" onClick={onDeleteClick}>
+    Delete
+</button>
         </div>
     );
 }
 
 export default Listing;
+
+
+
+
+
