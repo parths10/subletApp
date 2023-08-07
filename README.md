@@ -11,27 +11,30 @@ Access EasySubletUBC here:
 ##### Minimal requirements
 
 1. The application must allow the sublessors to create, update, and delete a sublet posting.
-2. The application must allow the sublessees to view existing sublet postings and interact with them.
-3. The application must allow users to import media files eg images of the rental. 
+2. The application must allow the sublessors to view the postings added by them in a dashboard view at the homepage. 
+3. The application must allow users to import media files eg images of the rental to a listing. 
 
 #### Standard requirements
 
-1. The application should be able to show the sublet postings in a list view on the dashboard.
-2. The application should allow the users to make offers on the sublet postings. 
+1. The application should allow the user to sign up if they are not an existing user.
+2. The application should allow the users to log into the app to view their respective postings. 
 
 ### Task breakdown:
 
-#### Task 1: Create a Sublet Posting
+#### Task 1: Sign up and login for an account in the app.
+
+- Go to the url for sign up page. 
+- Input the name, username, password and click sign up.
+- on the login page, input the username and password to login.
+- View the dashboard with existing posts.
+
+#### Task 2: Create a Sublet Posting
 
 - Click on add a posting. 
 - Provide information like residence type, duration, expected rent, contact and a description.
 - Optional: Upload images of the room.
 - Publish the posting.
 
-#### Task 2: Interact with a Posting.
-
-- Select a posting you are interested in, add to favourites or make an offer. 
-- Add the postig to favourites.
-- Make an offer on the postign you like. 
+ 
 
 
