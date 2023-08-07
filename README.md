@@ -33,7 +33,7 @@ Access EasySubletUBC here:
 - Click on add a posting. 
 - Provide information like residence type, duration, expected rent, contact and a description.
 - Optional: Upload images of the room.
-- Publish the posting.
+- Publish the posting..
 
  
 
