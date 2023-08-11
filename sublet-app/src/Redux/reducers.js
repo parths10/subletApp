@@ -1,27 +1,9 @@
-import { ADD_LISTING, DELETE_LISTING } from './actions';
+import { ADD_LISTING, DELETE_LISTING, SET_LISTINGS } from './actions';
+
 
 const initialState = {
-    listings: [
-        {
-            name: 'Parth',
-            contact: '2368652290',
-            residenceArea: 'Marine Drive',
-            roomType: 'Four Bedroom',
-            expectedRent: '1000',
-            description: 'non-smokers please',
-            // image: "pl",
-
-        },
-        {
-            name: 'Vedant',
-            contact: '23498423',
-            residenceArea: 'Thunderbird',
-            roomType: 'Studio',
-            expectedRent: '1200',
-            description: 'non-smokers please',
-            // image: "pl",
-        }
-    ],
+    listings: [], // Initialize with an empty array
+    // ... other initial state properties
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -36,6 +18,12 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 listings: state.listings.filter(listing => listing.id !== action.payload),
             };
+        case SET_LISTINGS:
+            return {
+                ...state,
+                listings: action.payload,
+            };
+
         default:
             return state;
     }

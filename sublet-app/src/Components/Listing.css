@@ -1,20 +1,84 @@
+/*.Listing {*/
+/*    display: flex;*/
+/*    !*flex-direction: column;*!*/
+/*    !*align-items: center;*!*/
+/*    border: 1px solid #ccc;*/
+/*    padding: 20px;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+/*    background-color: #f9f9f9;*/
+/*    !*justify-content: center; !* Vertically align the contents *!*!*/
+/*    position: relative;*/
+/*}*/
+
+/*.DeleteButton {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    right: 10px;*/
+/*    background-color: red;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 5px 10px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.ListingImage img {*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    object-fit: cover;*/
+/*    border-radius: 8px;*/
+/*    margin-bottom: 20px;*/
+/*    margin-left: auto; !* Keep the image on the right corner *!*/
+
+/*}*/
+/*.ListingInfo {*/
+/*    flex: 1; !* Allow ListingInfo to take remaining space *!*/
+/*}*/
+
+/*.ListingInfo h2 {*/
+/*    color: #007bff;*/
+/*    font-size: 1.6rem;*/
+/*    margin-bottom: 10px;*/
+/*    text-align: left; !* Align the heading to the left *!*/
+
+
+/*}*/
+
+/*.ListingInfo p {*/
+/*    margin: 5px;*/
+/*    font-size: 1.2rem;*/
+/*    text-align: left; !* Align the heading to the left *!*/
+
+/*}*/
+
+/*!* Add any additional styles for the Listing component here *!*/
+
 .Listing {
     display: flex;
-    /*flex-direction: column;*/
-    /*align-items: center;*/
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-    /*justify-content: center; !* Vertically align the contents *!*/
     position: relative;
+    align-items: flex-start;
+}
+
+.EditButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 .DeleteButton {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 70px; /* Adjust the right position */
     background-color: red;
     color: white;
     border: none;
@@ -28,28 +92,21 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
-    margin-left: auto; /* Keep the image on the right corner */
-
 }
+
 .ListingInfo {
-    flex: 1; /* Allow ListingInfo to take remaining space */
+    flex: 1;
 }
 
 .ListingInfo h2 {
     color: #007bff;
     font-size: 1.6rem;
     margin-bottom: 10px;
-    text-align: left; /* Align the heading to the left */
-
-
+    text-align: left;
 }
 
 .ListingInfo p {
     margin: 5px;
     font-size: 1.2rem;
-    text-align: left; /* Align the heading to the left */
-
+    text-align: left;
 }
-
-/* Add any additional styles for the Listing component here */
-
