@@ -1,4 +1,5 @@
-import { ADD_LISTING, DELETE_LISTING, SET_LISTINGS } from './actions';
+import { ADD_LISTING, DELETE_LISTING, SET_LISTINGS, EDIT_RENT } from './actions';
+import listing from "../Components/Listing";
 
 
 const initialState = {
@@ -24,6 +25,14 @@ const rootReducer = (state = initialState, action) => {
                 listings: action.payload,
             };
 
+        case EDIT_RENT:
+            const { listingId, newRent } = action.payload;
+            return {
+                ...state,
+                listings: state.listings.map((listing) =>
+                    listing.id === listingId ? { ...listing, rent: newRent } : listing
+                ),
+            };
         default:
             return state;
     }

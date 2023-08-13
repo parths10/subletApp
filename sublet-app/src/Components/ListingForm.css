@@ -1,15 +1,15 @@
-.ListingForm {
+.PostListingForm {
     margin: 20px;
 }
 
-.ListingForm form {
+.PostListingForm form {
     display: flex;
     flex-direction: column;
 }
 
-.ListingForm input,
-.ListingForm select,
-.ListingForm textarea {
+.PostListingForm input,
+.PostListingForm select,
+.PostListingForm textarea {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -17,12 +17,12 @@
     font-size: 1rem;
 }
 
-.ListingForm label {
+.PostListingForm label {
     margin-bottom: 5px;
     font-size: 1.1rem;
 }
 
-.ListingForm button {
+.PostListingForm button {
     padding: 12px 20px;
     background-color: #013977;
     color: #fff;
@@ -30,13 +30,11 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.2rem;
-    /*display: inline-block;*/
-    /*margin-top: 10px;*/
     margin-left: 10px;
 
 
 }
 
-.ListingForm button:hover {
+.PostListingForm button:hover {
     background-color: #0056b3;
 }

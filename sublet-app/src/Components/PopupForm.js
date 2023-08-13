@@ -38,8 +38,14 @@ function PopupForm({ formData, handleChange, handleImageChange, handleSubmit, on
                         required
                     >
                         <option value="">Select Residence</option>
-                        <option value="Residence A">Residence A</option>
-                        <option value="Residence B">Residence B</option>
+                        <option value="Marine Drive">Marine Drive</option>
+                        <option value="Ponderosa Commons">Ponderosa Commons</option>
+                        <option value="Brock Commons">Brock Commons</option>
+                        <option value="Thunderbird Residence">Thunderbird Residence</option>
+                        <option value="Exchange Residence">Exchange Residence</option>
+                        <option value="Pacific Residence">Pacific Residence</option>
+
+
                         {/* Add more residence options as needed */}
                     </select>
 
@@ -53,8 +59,11 @@ function PopupForm({ formData, handleChange, handleImageChange, handleSubmit, on
                     >
                         <option value="">Select Room Type</option>
                         <option value="Single Room">Single Room</option>
-                        <option value="Double Room">Double Room</option>
-                        {/* Add more room type options as needed */}
+                        <option value="2 Bedroom">2 Bedroom</option>
+                        <option value="3 Bedroom">3 Bedroom</option>
+                        <option value="4 Bedroom">4 Bedroomm</option>
+                        <option value="Studio">Studio</option>
+                        <option value="Nano Suite">Nano Suite</option>
                     </select>
 
                     <label htmlFor="expectedRent">Expected Rent:</label>
@@ -92,4 +101,11 @@ function PopupForm({ formData, handleChange, handleImageChange, handleSubmit, on
 }
 
 export default PopupForm;
+
+
+
+
+
+
+
 

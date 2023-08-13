@@ -10,7 +10,7 @@ function Popup({ message, onCancel, onConfirm }) {
                     <button className="CancelButton" onClick={onCancel}>
                         Cancel
                     </button>
-                    <button className="DeleteButton" onClick={onConfirm}>
+                    <button className="PopupDeleteButton" onClick={onConfirm}>
                         Delete
                     </button>
                 </div>

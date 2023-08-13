@@ -14,7 +14,7 @@ function ListingForm({ onAddListing }) {
         roomType: '',
         expectedRent: '',
         description: '',
-        image: '',
+        image: 'null',
     });
 
     const [showPopup, setShowPopup] = useState(false);
@@ -24,9 +24,6 @@ function ListingForm({ onAddListing }) {
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
-    const handleImageChange = (e) => {
-        setFormData((prevData) => ({ ...prevData, image: e.target.files[0] }));
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -35,7 +32,6 @@ function ListingForm({ onAddListing }) {
             const response = await axios.post('http://localhost:4555/insert', formData);
             console.log('Item added:', response.data);
 
-            // Assuming you have an action to update Redux store
             onAddListing(response.data);
 
             setFormData({
@@ -45,7 +41,7 @@ function ListingForm({ onAddListing }) {
                 roomType: '',
                 expectedRent: '',
                 description: '',
-                image: '',
+                image: 'null',
             });
 
             setShowPopup(false);
@@ -55,12 +51,11 @@ function ListingForm({ onAddListing }) {
     };
 
     return (
-        <div className="ListingForm">
+        <div className="PostListingForm">
             {showPopup && (
                 <PopupForm
                     formData={formData}
                     handleChange={handleChange}
-                    handleImageChange={handleImageChange}
                     handleSubmit={handleSubmit}
                     onClose={() => setShowPopup(false)}
                 />
