@@ -1,8 +1,17 @@
 # EasySubletUBC
 
+###Legend
+####Sublet: A place eg room/apartment given on rent for a short period of time. 
+####Sublessor: A person who wishes to give their place on rent. 
+####Sublessee: A person who wishes to rent someone else's place.
+
+✅ - Completed
+⚠️ - Work in Progress
+❌ - Not Started
+
 ### Project description:
 
-**EasySubletUBC** is a sublet management web application that lets the students at the UBC campus create a sublet posting where they mention the residence type, expected rent, and other details relevant to sublessees. The application should ideally have a two side usage scenario, one for sublessors and one for sublessees, but for this project will only focus on the sublessors side of the story. The sublessors will be able to add, update and delete a posting on the platform. They will also be able to add attractive pictures related to their posting and view them in an extended viewer format. Additionally, the sublessors will also be able to filter the kinds of postings they wish to refer/edit based using a filter option. This app has a viability to be scalled to off campus properties and cover a wider user base, but for pilot reasons, a smaller pool of audience is ideal. 
+**EasySubletUBC** is a sublet management web application that helps the sublessors and sublessess at the UBC Vancouver campus connect with each other and formalize a sublet contract. the application has two sides, sublessor and sublessee. This project only focuses on the sublessor's side of the story. EasySubletUBC allows the sublessors to create and delete a psoting on the website. They can also view their postings in user-friendly UI to confirm if they have added the correct information on their posting. 
 
 Access EasySubletUBC here:
 
@@ -10,16 +19,14 @@ Access EasySubletUBC here:
 
 ##### Minimal requirements
 
-1. The application must allow the sublessors to create and delete a sublet posting.
-2. The applicaitn must allow the sublessors to update the posting information if they wish to.
-3. The application must allow the sublessors to view the existing sublet postings added by them in a dashboard view at the homepage. 
-4. The application must allow users to import media files eg images of the rental to a listing. 
+1. The application must allow the sublessors to CREATE a sublet posting (sublessor)✅
+2. The application must allow the sublessors to DELETE a sublet posting (Sublessor)✅
+3. The applicaitn must allow the sublessors to VIEW the postings in a user-friendly dashboard view (Sublessor)✅  
 
 #### Standard requirements
-
-1. The application should allow the user to upload multiple photos and view them in a better ui in an extended viewer.
-2. The application should allow the users to filter the kind of rooms they are looking for, eg room type.
-
+1. The application should allow the sublessors to UPDATE a sublet posting (Sublessor)⚠️
+2. The application should allow the user to upload multiple photos and view them in a photo viewer (Sublessor and Sublessee) ⚠️
+3. The application should allow the users to filter the kind of rooms they are looking for, eg room type (Sublessor and Sublessee) ❌
 ### Task breakdown:
 
 #### Task 1: Sign up and login for an account in the app.
@@ -35,6 +42,19 @@ Access EasySubletUBC here:
 - Provide information like residence type, duration, expected rent, contact and a description.
 - Optional: Upload images of the room.
 - Publish the posting..
+
+#### Next Steps
+- The next steps include wotking on the rest of the features and develop sublessee's side of the app.
+- More features include the following
+-   Update the rent (Standard)
+-   Upload photos (Standard)
+-   Share on social media (Stretch)
+-   View the posting (Stretch)
+-   Favourite a posting (Stretch)
+-   Send an inquiry (Stretch)
+-   Message the sublessor (Stretch)
+-   Filter Postings (standard)
+
 
  
 
