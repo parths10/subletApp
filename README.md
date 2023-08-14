@@ -1,13 +1,12 @@
 # EasySubletUBC
 
 ###Legend
-####Sublet: A place eg room/apartment given on rent for a short period of time. 
-####Sublessor: A person who wishes to give their place on rent. 
-####Sublessee: A person who wishes to rent someone else's place.
 
-✅ - Completed
-⚠️ - Work in Progress
-❌ - Not Started
+1. Sublet: A place eg room/apartment given on rent for a short period of time. 
+2. Sublessor: A person who wishes to give their place on rent. 
+3. Sublessee: A person who wishes to rent someone else's place.
+
+4. ✅ - Completed ⚠️ - Work in Progress ❌ - Not Started
 
 ### Project description:
 
@@ -24,26 +23,33 @@ Access EasySubletUBC here:
 3. The applicaitn must allow the sublessors to VIEW the postings in a user-friendly dashboard view (Sublessor)✅  
 
 #### Standard requirements
-1. The application should allow the sublessors to UPDATE a sublet posting (Sublessor)⚠️
-2. The application should allow the user to upload multiple photos and view them in a photo viewer (Sublessor and Sublessee) ⚠️
-3. The application should allow the users to filter the kind of rooms they are looking for, eg room type (Sublessor and Sublessee) ❌
+2. The application should display an image of the sublet (Sublessor and Sublessee) ✅
+3. The application should allow the user to UPDATE ⚠️
+4. The application should allow the users to filter the kind of rooms they are looking for, eg room type (Sublessor and Sublessee) ❌
+
+#### Stretch requirements
+2. The application should display an image of the sublet (Sublessor and Sublessee) ✅
+3. The application should allow the user to UPDATE ⚠️
+4. The application should allow the users to filter the kind of rooms they are looking for, eg room type (Sublessor and Sublessee) ❌
 ### Task breakdown:
 
-#### Task 1: Sign up and login for an account in the app.
+#### Task 1: Create a listing on the website
 
-- Go to the url for sign up page. 
-- Input the name, username, password and click sign up.
-- on the login page, input the username and password to login.
-- View the dashboard with existing posts.
+- Go to the url for home page. 
+- Click on Post on the top right corner.
+- Fill out necessary posting details on the popup form.
+- Click submit.
+- View your posting on the dashboard.
 
-#### Task 2: Create a Sublet Posting
+#### Task 2: Delete a posting from the website.
 
-- Click on add a posting. 
-- Provide information like residence type, duration, expected rent, contact and a description.
-- Optional: Upload images of the room.
-- Publish the posting..
+- Go to the home page that says "My Postings"
+- Look for a posting that you wish to delete.
+- click on the delete button.
+- click on the delete button on the popup to confirm the deletion.
+- View the dashboard, but this time without the posting youjust deleted.
 
-#### Next Steps
+#### Next Steps (Future of this project)
 - The next steps include wotking on the rest of the features and develop sublessee's side of the app.
 - More features include the following
 -   Update the rent (Standard)
