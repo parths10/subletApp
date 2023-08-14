@@ -7,6 +7,8 @@ import axios from 'axios';
 
 function ListingForm() {
     const dispatch = useDispatch();
+
+    // State to manage the form data
     const [formData, setFormData] = useState({
         name: '',
         contact: '',
@@ -20,6 +22,8 @@ function ListingForm() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        
+        // spread operator to update the form data state
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
@@ -30,6 +34,7 @@ function ListingForm() {
             const response = await axios.post('https://subletserver.onrender.com/insert', formData);
             console.log('Item added:', response.data);
 
+            // Add listing dispatcher
             dispatch(addListing(response.data));
 
             setFormData({
