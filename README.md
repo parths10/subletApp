@@ -10,7 +10,7 @@
 
 ### Project description:
 
-**EasySubletUBC** is a sublet management web application that helps the sublessors and sublessess at the UBC Vancouver campus connect with each other and formalize a sublet contract. the application has two sides, sublessor and sublessee. This project only focuses on the sublessor's side of the story. EasySubletUBC allows the sublessors to create, delete and update a psoting on the website. They can also view their postings in user-friendly UI to confirm if they have added the correct information on their posting. 
+**EasySubletUBC** is a sublet management web application that helps the sublessors and sublessess at the UBC Vancouver campus connect with each other and formalize a sublet contract. The application has two sides, sublessor and sublessee. This project only focuses on the sublessor's side of the story. EasySubletUBC allows the sublessors to create, delete and update a psoting on the website. They can also view their postings in user-friendly UI to confirm if they have added the correct information on their posting. 
 
 Access EasySubletUBC here: https://subletapp.onrender.com
 
