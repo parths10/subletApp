@@ -55,8 +55,8 @@ app.get('/read/:residenceArea', async (req, res) => {
         if (residence === "all") {
             posts = await postModel.find();
         } else {
-            posts = await postModel.find({ residenceArea: residence }); // Filter by residenceType
-        }        //console.log('Fetched posts:', posts); // Add this line
+            posts = await postModel.find({ residenceArea: residence }); 
+        }       
         res.json(posts);
     } catch (error) {
         console.error(error);
@@ -67,7 +67,7 @@ app.get('/read/:residenceArea', async (req, res) => {
 
 
 app.put('/update/:id', async (req, res) => {
-    // console.log(req)
+
     const {id} = req.params;
     const rent  = req.body.expectedRent;
     try {
