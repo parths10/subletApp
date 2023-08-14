@@ -4,6 +4,7 @@ const initialState = {
     listings: []
 };
 
+// Manages listing's state for all actions
 const listingsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_LISTINGS:
@@ -20,6 +21,7 @@ const listingsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 listings: state.listings.map(listing =>
+                     // Updates the rent
                     listing._id === action.payload.id
                         ? { ...listing, expectedRent: action.payload.newRent }
                         : listing
@@ -30,6 +32,7 @@ const listingsReducer = (state = initialState, action) => {
                 ...state,
                 listings: state.listings.filter(listing => listing._id !== action.payload)
             };
+        //returns default state
         default:
             return state;
     }
