@@ -15,7 +15,7 @@ function EditRentPopupForm({ listing, onClose }) {
                 expectedRent: newRent,
             });
             if (response.status === 200) {
-                dispatch(editRent(listing._id, newRent)); // Update Redux store if needed
+                dispatch(editRent(listing._id, newRent)); 
                 onClose();
             } else {
                 console.error('Failed to update rent');
