@@ -8,11 +8,11 @@ import store from './Redux/store';
 import { addListing } from './Redux/actions';
 
 function App() {
-    // State to manage the selected filter option
+    // Filter state manager
     const [selectedFilter, setSelectedFilter] = useState('all');
 
     return (
-        // Wrapped the entire app in the Redux Provider to enable Redux store and state management
+        // Redux Provider Wrapper enables state management
         <Provider store={store}>
             <div className="App">
                 <div className="navbar">
