@@ -1,20 +1,12 @@
-
 import React, { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import { editRent } from '../Redux/actions';
-// import './PopupEdit.css';
 import axios from "axios";
 
 
 function EditRentPopupForm({ listing, onClose }) {
     const dispatch = useDispatch();
     const [newRent, setNewRent] = useState(listing.expectedRent);
-
-
-    // const handleSubmit = (id, newRent) => {
-    //     dispatch(editRent(id, newRent));
-    //     onClose();
-    // };
 
     const handleSubmit = async (e) => {
         e.preventDefault()

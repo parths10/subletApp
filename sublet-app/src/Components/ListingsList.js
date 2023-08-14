@@ -28,8 +28,7 @@ function ListingsList({ selectedFilter }) {
             });
 
             if (response.ok) {
-                dispatch(deleteListing(selectedListing._id));  // Dispatching the deleteListing action
-                // console.log('Deleted data:', data);
+                dispatch(deleteListing(selectedListing._id));
             } else {
                 throw new Error('Failed to delete data');
             }
@@ -67,7 +66,7 @@ function ListingsList({ selectedFilter }) {
             }
         }
 
-        fetchData(selectedFilter); // Pass the selected filter value as the parameter
+        fetchData(selectedFilter);
     }, [selectedFilter]);
 
 
@@ -94,9 +93,5 @@ function ListingsList({ selectedFilter }) {
         </div>
     );
 }
-
-const mapStateToProps = (state) => ({
-    listings: state.listings,
-});
 
 export default ListingsList;

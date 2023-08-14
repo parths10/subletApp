@@ -3,13 +3,10 @@ import './Listing.css';
 import EditRentPopupForm from './EditRentPopupForm';
 
 function Listing({ listing, onDeleteClick }) {
-    // State to manage whether the edit popup is shown
     const [showEditPopup, setShowEditPopup] = useState(false);
 
-    // Destructure the listing object
     const { _id, name, contact, residenceArea, roomType, expectedRent, description, image } = listing;
 
-    // Function to handle clicking the "Edit Rent" button
     const handleEditRentClick = () => {
         setShowEditPopup(true);
     };
@@ -55,7 +52,6 @@ function Listing({ listing, onDeleteClick }) {
                 </button>
             </div>
 
-            {/* Display the EditRentPopupForm */}
             {showEditPopup && (
                 <EditRentPopupForm listing={listing} onClose={() => setShowEditPopup(false)} />
             )}

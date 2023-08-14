@@ -1,11 +1,8 @@
-
-// actions.js
 export const SET_LISTINGS = 'SET_LISTINGS';
 export const ADD_LISTING = 'ADD_LISTING';
 export const EDIT_RENT = 'EDIT_RENT';
 export const DELETE_LISTING = 'DELETE_LISTING';
 
-// Action creators
 export const setListings = (listings) => ({
     type: SET_LISTINGS,
     payload: listings

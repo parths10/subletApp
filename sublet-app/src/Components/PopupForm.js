@@ -45,8 +45,6 @@ function PopupForm({ formData, handleChange, handleImageChange, handleSubmit, on
                         <option value="Exchange Residence">Exchange Residence</option>
                         <option value="Pacific Residence">Pacific Residence</option>
 
-
-                        {/* Add more residence options as needed */}
                     </select>
 
                     <label htmlFor="roomType">Room Type:</label>
