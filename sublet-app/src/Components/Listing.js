@@ -3,6 +3,8 @@ import './Listing.css';
 import EditRentPopupForm from './EditRentPopupForm';
 
 function Listing({ listing, onDeleteClick }) {
+    
+    // EditRent Popup state manager
     const [showEditPopup, setShowEditPopup] = useState(false);
 
     const { _id, name, contact, residenceArea, roomType, expectedRent, description, image } = listing;
