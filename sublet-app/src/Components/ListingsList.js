@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './ListingsList.css';
-import { setListings } from '../Redux/actions';
+import {deleteListing, setListings} from '../Redux/actions';
 import Popup from './Popup';
 import Listing from './Listing';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 function ListingsList({ listings, selectedFilter }) {
     const [selectedListing, setSelectedListing] = useState(null);
@@ -27,8 +27,8 @@ function ListingsList({ listings, selectedFilter }) {
             });
 
             if (response.ok) {
-                const data = await response.json();
-                console.log('Deleted data:', data);
+                dispatch(deleteListing(selectedListing._id));  // Dispatching the deleteListing action
+                // console.log('Deleted data:', data);
             } else {
                 throw new Error('Failed to delete data');
             }
@@ -98,4 +98,4 @@ const mapStateToProps = (state) => ({
     listings: state.listings,
 });
 
-export default connect(mapStateToProps)(ListingsList);
+export default ListingsList;

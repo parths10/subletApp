@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './ListingForm.css';
 import PopupForm from './PopupForm';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';  // Using Redux's useDispatch hook
 import { addListing } from '../Redux/actions';
 import axios from 'axios';
 
-function ListingForm({ onAddListing }) {
+function ListingForm() {
     // State to manage form data and popup visibility
+    const dispatch = useDispatch();  // Using Redux's useDispatch hook
     const [formData, setFormData] = useState({
         name: '',
         contact: '',
@@ -33,8 +34,10 @@ function ListingForm({ onAddListing }) {
             const response = await axios.post('http://localhost:4555/insert', formData);
             console.log('Item added:', response.data);
 
+
             // Update the Redux store with the new listing
-            onAddListing(response.data);
+            // onAddListing(response.data);
+            dispatch(addListing(response.data));  // Dispatching the addListing action
 
             // Reset form data and hide the popup
             setFormData({
@@ -70,4 +73,4 @@ function ListingForm({ onAddListing }) {
 }
 
 // Connect the component to Redux and map the onAddListing action
-export default connect(null, { onAddListing: addListing })(ListingForm);
+export default ListingForm;

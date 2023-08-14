@@ -16,7 +16,8 @@ function EditRentPopupForm({ listing, onClose }) {
     //     onClose();
     // };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             const response = await axios.put(`http://localhost:4555/update/${listing._id}`, {
                 expectedRent: newRent,

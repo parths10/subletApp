@@ -55,7 +55,6 @@ app.post('/insert', async (req, res) => {
 
 app.get('/read/:residenceArea', async (req, res) => {
     const residence = req.params.residenceArea;
-    console.log(residence)
     try {
         let posts;
         if (residence === "all") {
