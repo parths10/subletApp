@@ -1,14 +1,15 @@
-
 import React, { useState } from 'react';
 import './Listing.css';
 import EditRentPopupForm from './EditRentPopupForm';
 
-
 function Listing({ listing, onDeleteClick }) {
+    // State to manage whether the edit popup is shown
     const [showEditPopup, setShowEditPopup] = useState(false);
 
-    const { _id, name, contact, residenceArea, roomType, expectedRent,  description, image } = listing;
+    // Destructure the listing object
+    const { _id, name, contact, residenceArea, roomType, expectedRent, description, image } = listing;
 
+    // Function to handle clicking the "Edit Rent" button
     const handleEditRentClick = () => {
         setShowEditPopup(true);
     };
@@ -20,9 +21,11 @@ function Listing({ listing, onDeleteClick }) {
                 <p>Contact: {contact}</p>
                 <p>Residence Area: {residenceArea}</p>
                 <p>Room Type: {roomType}</p>
-                <p>Rent: {expectedRent}</p>
+                <p>Rent: $ {expectedRent}</p>
                 <p>Description: {description}</p>
             </div>
+
+            {/* Displays image based on residence area */}
             <div className="ListingImage">
                 {residenceArea === 'Marine Drive' && (
                     <img src="https://vancouver.housing.ubc.ca/wp-content/uploads/2014/01/Res_detail_MD_exterior1_1170x660.jpg" alt="Listing" />
@@ -51,16 +54,13 @@ function Listing({ listing, onDeleteClick }) {
                     Edit Rent
                 </button>
             </div>
+
+            {/* Display the EditRentPopupForm */}
             {showEditPopup && (
                 <EditRentPopupForm listing={listing} onClose={() => setShowEditPopup(false)} />
             )}
         </div>
-
     );
 }
 
 export default Listing;
-
-
-
-

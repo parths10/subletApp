@@ -5,12 +5,17 @@ const cors = require('cors');
 const postModel = require("./models/schema");
 const ObjectId = require('mongoose').Types.ObjectId;
 const methodOverride = require('method-override');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
 app.use(cors());
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+// var jsonParser = bodyParser.json()
+// app.use(jsonParser);
+
+
 
 const uri = 'mongodb+srv://parthsehtiya:qwerty2024@assignment4.8wzwdyg.mongodb.net/?retryWrites=true&w=majority';
 
@@ -45,10 +50,19 @@ app.post('/insert', async (req, res) => {
     }
 });
 
-app.get('/read', async (req, res) => {
+
+
+
+app.get('/read/:residenceArea', async (req, res) => {
+    const residence = req.params.residenceArea;
+    console.log(residence)
     try {
-        const posts = await postModel.find();
-        //console.log('Fetched posts:', posts); // Add this line
+        let posts;
+        if (residence === "all") {
+            posts = await postModel.find();
+        } else {
+            posts = await postModel.find({ residenceArea: residence }); // Filter by residenceType
+        }        //console.log('Fetched posts:', posts); // Add this line
         res.json(posts);
     } catch (error) {
         console.error(error);
@@ -56,25 +70,18 @@ app.get('/read', async (req, res) => {
     }
 });
 
-
-
-// app.put('/update/:id', async (req, res) => {
-//     const idToUpdate = req.params.id;
-//     const { expectedRent } = req.body;
-//
+// app.get('/read/filter', async (req, res) => {
 //     try {
-//         // Convert the string id to an ObjectId
-//         const objectIdToUpdate = mongoose.Types.ObjectId(idToUpdate);
+//         const residenceType = req.query.residenceArea; // Get the residenceType from query parameter
+//         let posts;
 //
-//         const updatedPost = await postModel.findByIdAndUpdate(objectIdToUpdate, {
-//             expectedRent, // Update the field you want to edit (expectedRent in this case)
-//         }, { new: true });
-//         res.json({message: "rent updated"});
-//         if (!updatedPost) {
-//             return res.status(404).json({ error: 'Post not found' });
+//         if (residenceType) {
+//             posts = await postModel.find({ residenceArea: residenceType }); // Filter by residenceType
+//         } else {
+//             posts = await postModel.find();
 //         }
 //
-//         res.json(updatedPost);
+//         res.json(posts);
 //     } catch (error) {
 //         console.error(error);
 //         res.status(500).json({ error: 'Internal server error' });
@@ -82,22 +89,42 @@ app.get('/read', async (req, res) => {
 // });
 
 
-app.put('/update/:id', async (req, res) => {
-    const { id } = req.params;
-    const { rent } = req.expectedRent;
 
+app.put('/update/:id', async (req, res) => {
+    // console.log(req)
+    const {id} = req.params;
+    const rent  = req.body.expectedRent;
     try {
         const updatedRent = await postModel.findOneAndUpdate(
-            { id },
-            { rent },
-            { new: true }
+            {"_id":id},
+            {$set:{"expectedRent": rent}},
+            {returnNewDocument: true}
         );
-
         res.json(updatedRent);
+        console.log(updatedRent)
     } catch (error) {
         res.status(500).json({ error: 'An error occurred.' });
     }
 });
+
+// //Filter
+// // Assuming you have a route like this
+// app.get('/listings', async (req, res) => {
+//     try {
+//         const { residenceArea } = req.query;
+//         let query = {};
+//
+//         if (residenceArea) {
+//             query = { residenceArea };
+//         }
+//
+//         const listings = await Listing.find(query);
+//         res.json(listings);
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({ message: 'Server error' });
+//     }
+// });
 
 
 

@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the item schema
 const postSchema = new mongoose.Schema({
     name: String,
     contact: String,

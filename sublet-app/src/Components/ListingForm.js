@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './ListingForm.css';
 import PopupForm from './PopupForm';
@@ -7,6 +6,7 @@ import { addListing } from '../Redux/actions';
 import axios from 'axios';
 
 function ListingForm({ onAddListing }) {
+    // State to manage form data and popup visibility
     const [formData, setFormData] = useState({
         name: '',
         contact: '',
@@ -16,24 +16,27 @@ function ListingForm({ onAddListing }) {
         description: '',
         image: 'null',
     });
-
     const [showPopup, setShowPopup] = useState(false);
 
+    // Function to handle input changes in the form fields
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
-
+    // Function to handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
+            // Send a POST request to add a new listing
             const response = await axios.post('http://localhost:4555/insert', formData);
             console.log('Item added:', response.data);
 
+            // Update the Redux store with the new listing
             onAddListing(response.data);
 
+            // Reset form data and hide the popup
             setFormData({
                 name: '',
                 contact: '',
@@ -43,7 +46,6 @@ function ListingForm({ onAddListing }) {
                 description: '',
                 image: 'null',
             });
-
             setShowPopup(false);
         } catch (error) {
             console.error('Error adding item:', error);
@@ -52,6 +54,7 @@ function ListingForm({ onAddListing }) {
 
     return (
         <div className="PostListingForm">
+            {/* Display the popup form when showPopup is true */}
             {showPopup && (
                 <PopupForm
                     formData={formData}
@@ -60,9 +63,11 @@ function ListingForm({ onAddListing }) {
                     onClose={() => setShowPopup(false)}
                 />
             )}
+            {/* Button to open the popup form */}
             <button onClick={() => setShowPopup(true)}>Post</button>
         </div>
     );
 }
 
+// Connect the component to Redux and map the onAddListing action
 export default connect(null, { onAddListing: addListing })(ListingForm);

@@ -37,7 +37,7 @@ function PopupForm({ formData, handleChange, handleImageChange, handleSubmit, on
                         onChange={handleChange}
                         required
                     >
-                        <option value="">Select Residence</option>
+                        <option value="all">Select Residence</option>
                         <option value="Marine Drive">Marine Drive</option>
                         <option value="Ponderosa Commons">Ponderosa Commons</option>
                         <option value="Brock Commons">Brock Commons</option>

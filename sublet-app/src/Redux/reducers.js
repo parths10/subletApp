@@ -3,8 +3,7 @@ import listing from "../Components/Listing";
 
 
 const initialState = {
-    listings: [], // Initialize with an empty array
-    // ... other initial state properties
+    listings: [],
 };
 
 const rootReducer = (state = initialState, action) => {

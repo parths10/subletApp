@@ -17,10 +17,10 @@
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    max-width: 80%; /* Adjust the width as needed */
-    width: 500px; /* Set a fixed width for larger screens */
+    max-width: 80%;
+    width: 500px;
     max-height: 90%;
-    overflow-y: auto; /* Enable scrolling for the content */
+    overflow-y: auto;
 }
 
 .PopupForm h2 {
@@ -75,7 +75,7 @@
     background-color: #011c38;
 }
 
-/* Media Query for Smaller Screens */
+
 @media screen and (max-width: 768px) {
     .PopupFormContent {
         max-width: 95%;

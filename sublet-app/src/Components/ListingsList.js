@@ -5,7 +5,7 @@ import Popup from './Popup';
 import Listing from './Listing';
 import { connect, useDispatch } from 'react-redux';
 
-function ListingsList({ listings }) {
+function ListingsList({ listings, selectedFilter }) {
     const [selectedListing, setSelectedListing] = useState(null);
     const [showPopup, setShowPopup] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -40,17 +40,17 @@ function ListingsList({ listings }) {
         }
     };
 
-
-
     const handleDeleteCancel = () => {
         setSelectedListing(null);
         setShowPopup(false);
     };
 
+
     useEffect(() => {
-        async function fetchData() {
+        async function fetchData(selectedFilter) {
             try {
-                const response = await fetch('http://localhost:4555/read');
+                const url = `http://localhost:4555/read/${encodeURIComponent(selectedFilter)}`;
+                const response = await fetch(url);
                 console.log('Response status:', response.status);
                 if (response.ok) {
                     const data = await response.json();
@@ -66,8 +66,9 @@ function ListingsList({ listings }) {
             }
         }
 
-        fetchData();
-    }, []);
+        fetchData(selectedFilter); // Pass the selected filter value as the parameter
+    }, [selectedFilter]);
+
 
     return (
         <div className="ListingsList">

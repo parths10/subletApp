@@ -23,7 +23,6 @@ export const setListings = (listings) => ({
     payload: listings,
 });
 
-// In your actions.js file
 export const editRent = (listingId, newRent) => ({
     type: 'EDIT_RENT',
     payload: { listingId, newRent },
