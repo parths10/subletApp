@@ -1,6 +1,7 @@
 import React from 'react';
 import './Popup.css';
 
+// Handles the confirm delete fucntionality
 function Popup({ message, onCancel, onConfirm }) {
     return (
         <div className="PopupOverlay">
