@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
-import {useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { editRent } from '../Redux/actions';
 import axios from "axios";
-
 
 function EditRentPopupForm({ listing, onClose }) {
     const dispatch = useDispatch();
     const [newRent, setNewRent] = useState(listing.expectedRent);
 
+    // Handle form submission to update rent
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault(); 
+
         try {
+            // PUT request to update the rent
             const response = await axios.put(`https://subletserver.onrender.com/update/${listing._id}`, {
                 expectedRent: newRent,
             });
+
             if (response.status === 200) {
-                dispatch(editRent(listing._id, newRent)); 
+                // Update rent dispatcher
+                dispatch(editRent(listing._id, newRent));
                 onClose();
             } else {
                 console.error('Failed to update rent');
@@ -38,6 +42,7 @@ function EditRentPopupForm({ listing, onClose }) {
                         onChange={(e) => setNewRent(e.target.value)}
                         required
                     />
+
                     <div className="PopupButtons">
                         <button type="button" onClick={onClose}>
                             Cancel
@@ -53,4 +58,3 @@ function EditRentPopupForm({ listing, onClose }) {
 }
 
 export default EditRentPopupForm;
-
