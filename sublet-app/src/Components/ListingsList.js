@@ -23,7 +23,7 @@ function ListingsList({ selectedFilter }) {
                 return;
             }
 
-            const response = await fetch(`http://localhost:4555/delete/${selectedListing._id}`, {
+            const response = await fetch(`https://subletserver.onrender.com/delete/${selectedListing._id}`, {
                 method: 'DELETE',
             });
 
@@ -50,7 +50,7 @@ function ListingsList({ selectedFilter }) {
     useEffect(() => {
         async function fetchData(selectedFilter) {
             try {
-                const url = `http://localhost:4555/read/${encodeURIComponent(selectedFilter)}`;
+                const url = `https://subletserver.onrender.com/read/${encodeURIComponent(selectedFilter)}`;
                 const response = await fetch(url);
                 console.log('Response status:', response.status);
                 if (response.ok) {

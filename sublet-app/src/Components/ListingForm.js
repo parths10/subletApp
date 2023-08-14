@@ -31,7 +31,7 @@ function ListingForm() {
 
         try {
             // Send a POST request to add a new listing
-            const response = await axios.post('http://localhost:4555/insert', formData);
+            const response = await axios.post('https://subletserver.onrender.com/insert', formData);
             console.log('Item added:', response.data);
 
 

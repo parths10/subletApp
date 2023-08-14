@@ -19,7 +19,7 @@ function EditRentPopupForm({ listing, onClose }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.put(`http://localhost:4555/update/${listing._id}`, {
+            const response = await axios.put(`https://subletserver.onrender.com/update/${listing._id}`, {
                 expectedRent: newRent,
             });
             if (response.status === 200) {
