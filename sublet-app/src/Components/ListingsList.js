@@ -45,7 +45,7 @@ function ListingsList({ selectedFilter }) {
         setShowPopup(false);
     };
 
-
+    // Fetch listings based on selected filter using useEffect
     useEffect(() => {
         async function fetchData(selectedFilter) {
             try {
