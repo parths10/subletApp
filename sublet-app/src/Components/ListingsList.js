@@ -3,9 +3,10 @@ import './ListingsList.css';
 import {deleteListing, setListings} from '../Redux/actions';
 import Popup from './Popup';
 import Listing from './Listing';
-import { useDispatch } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
-function ListingsList({ listings, selectedFilter }) {
+function ListingsList({ selectedFilter }) {
+    const listings = useSelector(state => state?.listings || [])
     const [selectedListing, setSelectedListing] = useState(null);
     const [showPopup, setShowPopup] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
